@@ -147,7 +147,10 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+Node.js is the counterpoint to javascript in the browser, written to use the same compiler (V8 engine). It is single-threaded, making it significantly easier to learn and harness. It is asynchronous, making use of the message queue and job queue to prevent blocking. The repository of packages (largely free) that is available for use is astoundingly large, providing incredible scalability and efficiency of development. 
+Express is one of the oldest and most popular packages for node.js. It takes some of the more tedious and involved aspects of creating a server in node.js and makes them easy to harness in a modular way.
 1. Understand and explain the use of Middleware.
+Middleware acts to intercept data between first input and ultimate output. It's like a filter that takes the data, analyzes it, and can either pass it through unchanged, change it and pass it along, or to stop the progression of the data through error handling. Express routers are a prime example of middleware. Common applications are in data validation and error handling.
 1. The basic principles of the REST architectural style.
 1. Understand and explain the use of Express Routers.
 1. Describe tooling used to manually test the correctness of an API.

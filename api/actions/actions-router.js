@@ -1,7 +1,7 @@
 const express = require('express');
 const {get, insert, update, remove} = require('./actions-model');
-// const {verifyActionId} = require('./actions-middlware')
-// const {verifyProjectId} = require('../projects/projects-middleware');
+const {verifyActionId} = require('./actions-middlware')
+const {verifyProjectId} = require('../projects/projects-middleware');
 const actionsRouter = express.Router();
 
 actionsRouter.get('/', (req, res) => {

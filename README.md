@@ -149,8 +149,22 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. The core features of Node.js and Express and why they are useful.
 Node.js is the counterpoint to javascript in the browser, written to use the same compiler (V8 engine). It is single-threaded, making it significantly easier to learn and harness. It is asynchronous, making use of the message queue and job queue to prevent blocking. The repository of packages (largely free) that is available for use is astoundingly large, providing incredible scalability and efficiency of development. 
 Express is one of the oldest and most popular packages for node.js. It takes some of the more tedious and involved aspects of creating a server in node.js and makes them easy to harness in a modular way.
-1. Understand and explain the use of Middleware.
+2. Understand and explain the use of Middleware.
 Middleware acts to intercept data between first input and ultimate output. It's like a filter that takes the data, analyzes it, and can either pass it through unchanged, change it and pass it along, or to stop the progression of the data through error handling. Express routers are a prime example of middleware. Common applications are in data validation and error handling.
-1. The basic principles of the REST architectural style.
-1. Understand and explain the use of Express Routers.
-1. Describe tooling used to manually test the correctness of an API.
+3. The basic principles of the REST architectural style.
+REST stands for Representational State Transfer. The REST API is a paradigm for api design that is decidedly opinionated, and thereby provides consistency in design. Some design constraints that it specifies are:
+🐝Statelessness: all the data needed to process a request must be provided with the request -- the server does not maintain state
+🐝Client/Server Distinction: they should be two independent entities, which allows for scalability.
+🐝Cacheable: responses specify whether they are cacheable, which prevents irrelevant subsequent requests
+🐝System Layering: the API is a layer between client and server -- they don't know whether they are communicating directly with one another or not. This aids security and scalability.
+🐝Uniform Interface: data gets transferred in a standardized format
+Additionally, other de facto structuring patterns exist: endpoints are named for the resources they represented (nouns) rather than for the action of acquiring them (verbs); accessing resources as a group typically has a different endpoint than accessing a single item, etc.
+In terms of functionality, REST APIs use HTTP verbs to perform CRUD (Create, Read, Write, Delete) operations. These include:
+🐝GET: acquire a resource
+🐝POST: add a resource
+🐝PATCH: modify part of a resource
+🐝PUT: modify an entire resource (replace it)
+🐝DELETE: you get the idea
+4. Understand and explain the use of Express Routers.
+Express's Router class allows for modularity (and thereby scalability) of servers. It allows for a section of api endpoints to be managed together with its own middleware and then exported to the server as a form of middleware for the server.
+5. Describe tooling used to manually test the correctness of an API.

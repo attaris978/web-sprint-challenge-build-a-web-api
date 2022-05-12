@@ -43,4 +43,10 @@ projectsRouter.delete('/:id', verifyProjectId, (req, res) => {
     .catch(() => res.status(500).json({message: "Failed to delete target project"}))
 })
 
+projectsRouter.get('/:id/actions', verifyProjectId, (req, res) => {
+    getProjectActions(req.params.id)
+    .then(actions => res.status(200).json(actions))
+    .catch(() => res.status(500).json({message: "Testing projects root get function"}))
+})
+
 module.exports = projectsRouter;

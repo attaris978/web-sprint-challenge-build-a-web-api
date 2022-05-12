@@ -168,3 +168,6 @@ In terms of functionality, REST APIs use HTTP verbs to perform CRUD (Create, Rea
 4. Understand and explain the use of Express Routers.
 Express's Router class allows for modularity (and thereby scalability) of servers. It allows for a section of api endpoints to be managed together with its own middleware and then exported to the server as a form of middleware for the server.
 5. Describe tooling used to manually test the correctness of an API.
+There are myriad options for testing an API.
+My preferred method is using the developer console in my web browser and writing out fetch requests. It's the form with which I am most familiar, and it's a moment's work to throw together a request for testing that can be tweaked with a few keyboard strokes to test different endpoints.
+HTTPie offers another great CLI option. PostMan offers a large number of added features. 
